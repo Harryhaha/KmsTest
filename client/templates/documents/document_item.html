@@ -1,0 +1,21 @@
+<template name="documentItem">
+
+    <div class="col-md-4">
+        <h2>{{title}}</h2>
+        <p>{{partOfContent}}</p>
+        <p><a href="{{pathFor 'documentDetail'}}" class="btn btn-default" role="button">View details &raquo;</a></p>
+    </div>
+
+</template>
+
+
+<template name="documentDetail">
+    <div class="container">
+        <div class="row">
+            <h2 style="text-align: center;">{{title}}</h2>
+        </div>
+        {{#each story}}
+            {{> paragraphDetail}}
+        {{/each}}
+    </div>
+</template>
