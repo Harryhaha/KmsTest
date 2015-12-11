@@ -7,3 +7,4 @@
 Pages = new Mongo.Collection('pages');
 Segments = new Mongo.Collection('segments');
 Paragraphs = new Mongo.Collection('paragraphs');
+Phrases = new Mongo.Collection('phrases');
