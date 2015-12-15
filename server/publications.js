@@ -14,6 +14,7 @@ Meteor.publish('segments', function(){
 //
 Meteor.publish('singleDocument', function(segmentId){
     return Segments.find({_id: segmentId});
+
 });
 Meteor.publish('allParagraphsBelongToSegment', function(PgID){  //PgID is the id of the segment include this paragraph
     return Paragraphs.find({PgID: PgID});                       //get all of the paragraphs belong to specific segment
