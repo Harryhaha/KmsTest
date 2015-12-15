@@ -3,9 +3,11 @@
  */
 //correspond to documentsList router template
 Meteor.publish('pages', function(){
+
     return Pages.find({kmsTitle: "Home"});
 });
 Meteor.publish('segments', function(){
+    console.log(this.userId);
     return Segments.find({kmsTitle: "PgSegments"}); // only publish the segments on whole document level
 });
 
@@ -20,3 +22,9 @@ Meteor.publish('allPhrases', function(){
     return Phrases.find({});
 });
 
+
+Meteor.publish('currentUser', function(username){
+    if(this.userId){
+        return Meteor.users.find({username: username});
+    }
+});

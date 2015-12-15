@@ -21,3 +21,10 @@ twbs:bootstrap
 underscore
 sacha:spin
 iron:router
+zuzel:atlassian-crowd
+accounts-password
+meteorhacks:npm
+
+
+npm-container
+gadicohen:headers

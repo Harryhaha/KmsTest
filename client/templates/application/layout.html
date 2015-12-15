@@ -1,9 +1,28 @@
 <template name="layout">
+    <!-- {{#if Template.subscriptionsReady}} -->
 
-    {{> header}}
-    <!-- {{> Errors}}  -->
-    <!-- <div id="main" class="row-fluid"> -->
+       <!-- {{> header}} -->
+        <!-- {{> Errors}}  -->
+        <!-- <div id="main" class="row-fluid"> -->
+         <!--   {{> yield}}  -->
+        <!-- </div> -->
+    <!-- {{else}}
+        Please wait, it is authenticating.....  -->
+    <!-- {{/if}} -->
+
+
+    {{#if auth}}
+        {{#if hasAuth}}
+            {{> header}}
+            {{> yield }}
+        {{else}}
+            {{> loading}}
+        {{/if}}
+    {{else}}
+        {{> header}}
         {{> yield}}
-    <!-- </div> -->
+    {{/if}}
+
+
 
 </template>

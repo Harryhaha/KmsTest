@@ -3,5 +3,5 @@
  */
 
 Template.documentsList.onRendered(function(){
-    //console.log(this.data);
+
 });
